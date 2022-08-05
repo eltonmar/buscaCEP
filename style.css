@@ -1,0 +1,76 @@
+body {
+    align-items: center;
+    background: linear-gradient(20deg, #acdfa7 2%, #238a28 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    min-height: 100vh;
+}
+
+.botao {
+    width: 200px;
+    padding: 15px 15px 15px;
+    margin: 2rem 2rem 2rem;
+    background-color: rgb(17, 126, 50);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.botao:hover {
+    background-color: rgb(138, 113, 96);
+    transform: scale(1.15);
+}
+
+.formulario {
+    margin-top: 2rem;
+}
+
+.formulario__legenda {
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.input {
+    box-sizing: border-box;
+    padding: 1.375rem 0.5rem 0.5rem;
+    height: 3.25rem;
+    width: 100%;
+}
+
+.input::placeholder {
+    visibility: hidden;
+    color: #00000000;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input-label {
+    position: absolute;
+    top: 1.375rem;
+    left: 0.5rem;
+    transition: all .25s;
+    color: #666666;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.input:not(:placeholder-shown)+.input-label,
+.input:focus+.input-label {
+    font-size: 0.875rem;
+    top: 0.25rem;
+    transition: all .25s;
+}
